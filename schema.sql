@@ -8,22 +8,26 @@ CREATE TABLE department
 (
     id INT
     AUTO_INCREMENT NOT NULL ,
-  dept_name VARCHAR
+        dept_name VARCHAR
     (30) NOT NULL,
-  dept_manager VARCHAR
-    (30) NOT NULL,
-  primary key
+        primary key
     (id),
 );
 
-    CREATE TABLE roles
+    CREATE TABLE role
     (
         id INT NOT NULL
         AUTO_INCREMENT,
-  roles VARCHAR
+        roles VARCHAR
         (30) NOT NULL,
-  dept_id INT NOT NULL
-  primary key
+        dept_id INT NOT NULL, 
+        salary DECIMAL
+        (10, 2) NOT NULL,
+        primary key
+        (id),
+        FOREIGN KEY
+        (dept_id)
+            REFERENCES department
         (id),
 );
 
@@ -31,11 +35,20 @@ CREATE TABLE department
         (
             id INT NOT NULL
             AUTO_INCREMENT,
-  emp_name VARCHAR
+        first_name VARCHAR
             (30) NOT NULL,
-  role_id INT NOT NULL,
-  manager_id INT NOT NULL,
-  primary key
+        last_name VARCHAR
+            (30) NOT NULL,
+        role_id INT NOT NULL,
+        manager_id INT,
+        primary key
+            (id), 
+        FOREIGN KEY
+            (role_id) REFERENCES role
+            (id) ON
+            DELETE CASCADE,
+        FOREIGN KEY(manager_id)
+            REFERENCES employee
             (id),
 );
 
@@ -47,9 +60,9 @@ CREATE TABLE department
             INSERT INTO roles
                 (roles)
             VALUES
-                ("Specific_Job");
+                ("title");
 
             INSERT INTO employees
-                (emp_name)
+                (first_name, last_name)
             VALUES
                 ("Name");
