@@ -1,0 +1,29 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "<hr>",
+  "main": "server.js",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "console-table": "^0.1.2",
+    "console.table": "^0.10.0",
+    "dotenv": "^8.2.0",
+    "inquirer": "^8.0.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniarinker/Employee-Tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniarinker/Employee-Tracker/issues"
+  },
+  "homepage": "https://github.com/daniarinker/Employee-Tracker#readme"
+}

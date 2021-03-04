@@ -51,4 +51,3 @@ CREATE TABLE department
             REFERENCES employee
             (id),
 );
-

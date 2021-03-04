@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const mysql = require("mysql");
 const consoletable = require("console.table");
+const chalk = require("chalk");
 
 var connection = mysql.createConnection({
   host: "localhost",
@@ -107,7 +108,7 @@ function addDept() {
           if (err) throw err;
           console.log(chalk.black.bgGreen("Department created."));
 
-          startAppApp();
+          startApp();
         }
       );
     });
@@ -144,7 +145,7 @@ function addRole() {
           if (err) throw err;
           console.log(chalk.black.bgGreen("Role created."));
 
-          startAppApp();
+          startApp();
         }
       );
     });
@@ -194,7 +195,7 @@ function addEmp() {
           if (err) throw err;
           console.log(chalk.black.bgGreen("Employee added."));
 
-          startAppApp();
+          startApp();
         }
       );
     });
