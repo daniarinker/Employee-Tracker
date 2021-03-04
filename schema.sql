@@ -52,17 +52,3 @@ CREATE TABLE department
             (id),
 );
 
-            INSERT INTO department
-                (dept_name)
-            VALUES
-                ("Department");
-
-            INSERT INTO roles
-                (roles)
-            VALUES
-                ("title");
-
-            INSERT INTO employees
-                (first_name, last_name)
-            VALUES
-                ("Name");
