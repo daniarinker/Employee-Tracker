@@ -10,9 +10,9 @@ VALUES
 INSERT INTO  roles
     (roles, salary, dept_id)
 VALUES
-    ("Sales", "1000.00", "100"),
-    ("Lead", "2000.00", "200"),
-    ("Supervisor", "5000.00", "300");
+    ("Sales", "1000.00", "1"),
+    ("Lead", "2000.00", "2"),
+    ("Supervisor", "5000.00", "3");
 
 INSERT INTO  employee
     (first_name, last_name, role_id)
