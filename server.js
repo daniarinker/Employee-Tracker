@@ -21,7 +21,7 @@ function startApp() {
     .prompt({
       name: "addInfo",
       type: "list",
-      message: "Welcome! What can we do here?",
+      message: "Welcome! How can we help?",
       choices: [
         "Add Department",
         "Add Role",
@@ -138,7 +138,7 @@ function addRole() {
       connection.query(
         "INSERT INTO roles SET ?",
         {
-          roles: answer.addRole,
+          title: answer.addRole,
           dept_id: answer.deptId,
         },
         function (err) {
@@ -185,7 +185,7 @@ function addEmp() {
     ])
     .then(function (answer) {
       connection.query(
-        "INSERT INTO employees SET ?",
+        "INSERT INTO employee SET ?",
         {
           full_name: answer.addEmp,
           role_id: answer.roleId,
@@ -208,7 +208,7 @@ function viewDept() {
   });
 }
 function viewEmp() {
-  connection.query("SELECT * FROM employees", function (err, results) {
+  connection.query("SELECT * FROM employee", function (err, results) {
     if (err) throw err;
     console.table(results);
     startApp();
@@ -222,11 +222,11 @@ function viewRole() {
   });
 }
 function updateEmp() {
-  connection.query("SELECT * FROM employees", function (err, employees) {
+  connection.query("SELECT * FROM employee", function (err, employee) {
     if (err) throw err;
     connection.query("SELECT * FROM roles", function (err, roles) {
       if (err) throw err;
-      const employeeChoices = employees.map((emp) => ({
+      const employeeChoices = employee.map((emp) => ({
         name: emp.full_name,
         value: emp,
       }));
@@ -251,7 +251,7 @@ function updateEmp() {
         ])
         .then(function (answer) {
           connection.query(
-            "UPDATE employees SET role_id = ? WHERE id = ?",
+            "UPDATE employee SET role_id = ? WHERE id = ?",
             [answer.updateRole.id, answer.updateEmp.id],
             function (err) {
               if (err) throw err;
@@ -270,7 +270,7 @@ function deleteData() {
         name: "deleteTable",
         type: "list",
         message: "What information would you like to delete?",
-        choices: ["employees", "roles", "department"],
+        choices: ["employee", "roles", "department"],
       },
     ])
     .then(function (answer) {
