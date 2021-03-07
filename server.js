@@ -231,6 +231,7 @@ function viewDept() {
   connection.query("SELECT * FROM department", function (err, results) {
     if (err) throw err;
     console.table(results);
+    console.log(chalk.black.bgGreen("Listing all departments."));
     startApp();
   });
 }
@@ -238,6 +239,7 @@ function viewEmp() {
   connection.query("SELECT * FROM employee", function (err, results) {
     if (err) throw err;
     console.table(results);
+    console.log(chalk.black.bgGreen("Listing all employees."));
     startApp();
   });
 }
@@ -245,6 +247,7 @@ function viewRole() {
   connection.query("SELECT * FROM roles", function (err, results) {
     if (err) throw err;
     console.table(results);
+    console.log(chalk.black.bgGreen("Listing all roles."));
     startApp();
   });
 }
@@ -299,6 +302,7 @@ function updateEmp() {
                       function (err, res) {
                         if (err) throw err;
                         console.table(res);
+                        console.log(chalk.black.bgGreen("Employee updated."));
                         startApp();
                       }
                     );
@@ -336,7 +340,7 @@ function deleteEmp() {
             [response.delete],
             function (err, res) {
               if (err) throw err;
-              console.log("Employee Deleted");
+              console.log(chalk.black.bgGreen("Employee deleted."));
               startApp();
             }
           );
@@ -368,7 +372,7 @@ function deleteRole() {
           [response.delete],
           function (err, res) {
             if (err) throw err;
-            console.log("Role Deleted");
+            console.log(chalk.black.bgGreen("Role Deleted."));
             startApp();
           }
         );
@@ -401,7 +405,7 @@ function deleteDept() {
             [response.delete],
             function (err, res) {
               if (err) throw err;
-              console.log("Department Deleted");
+              console.log(chalk.black.bgGreen("Department deleted."));
               startApp();
             }
           );
