@@ -77,7 +77,10 @@ $ node server.js
 
 ## :memo: Demo
 
-<iframe src="https://drive.google.com/file/d/13GoRLf-_bvFYnA8Rxd-ZKf5xWZQE-kuL/preview" width="640" height="480"></iframe>
+Available for viewing here:
+https://drive.google.com/file/d/13GoRLf-_bvFYnA8Rxd-ZKf5xWZQE-kuL/view
+
+<iframe src="https://drive.google.com/file/d/13GoRLf-_bvFYnA8Rxd-ZKf5xWZQE-kuL/view" width="640" height="480"></iframe>
 
 ## Author
 
