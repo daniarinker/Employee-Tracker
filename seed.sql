@@ -8,7 +8,7 @@ VALUES
     ("Sales");
 
 INSERT INTO  roles
-    (roles, salary, dept_id)
+    (title, salary, dept_id)
 VALUES
     ("Sales", "1000.00", "1"),
     ("Lead", "2000.00", "2"),
@@ -24,6 +24,6 @@ VALUES
 INSERT INTO  employee
     (first_name, last_name, role_id, manager_id)
 VALUES
-    ("Tom", "Allen", "4", "1"),
-    ("Malia", "Brown", "5", "2"),
-    ("Mike", "Chan", "6", "3");
+    ("Tom", "Allen", "1", "1"),
+    ("Malia", "Brown", "1", "2"),
+    ("Mike", "Chan", "1", "3");
