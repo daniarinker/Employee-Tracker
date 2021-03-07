@@ -83,8 +83,6 @@ $ node server.js
 Available for viewing here:
 https://drive.google.com/file/d/13GoRLf-_bvFYnA8Rxd-ZKf5xWZQE-kuL/view
 
-<iframe src="https://drive.google.com/file/d/13GoRLf-_bvFYnA8Rxd-ZKf5xWZQE-kuL/view" width="640" height="480"></iframe>
-
 ## Author
 
 Made with :heart: by <a href="https://github.com/daniarinker" target="_blank">Dania Rinker</a>
